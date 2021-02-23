@@ -10,7 +10,6 @@
     /*bouton 2*/
     bout2.addEventListener('mousedown', function(){
         carrousel.style.transform = "translateX(-100vw)";
-    
     })
     /*bouton 3*/
     bout3.addEventListener('mousedown', function(){

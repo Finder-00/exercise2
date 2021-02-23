@@ -1,7 +1,7 @@
 .carrousel{
     display: flex;
     width: 300vw;
-    height: 20vh;
+    height: 50vh;
     transition: transform 0.5s;
 
     div{
@@ -22,4 +22,32 @@
             background-color: rgb(255, 92, 133);
         }
     } /*fin div*/
+}
+
+.bouton{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    margin: 0 0 10px 0;
+}
+
+#un,#deux,#trois{
+    background-color: #fff;
+    border-radius: 100px;
+    width: 16px;
+    height: 16px;
+    margin: 4px;
+    &:hover{
+        cursor: pointer;
+        background-color: rgb(57, 20, 165);
+        border: 1.35px solid white;
+    }
+    @include media-desktop{
+        background-color: #4096dd;
+        border: 2px;
+        &:hover{
+            background-color: rgb(73, 56, 124);
+            border: 2px solid rgb(48, 45, 118);
+        }
+    }
 }

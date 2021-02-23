@@ -655,10 +655,6 @@ textarea {
 			.site-description
 		#site-navigation - .main-navigation
 */
-.site-branding, #primary, #colophon {
-  margin: 10px;
-}
-
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
@@ -667,6 +663,7 @@ textarea {
 .main-navigation {
   display: block;
   width: 100%;
+  margin-bottom: 5vh;
 }
 
 .main-navigation ul {
@@ -1053,10 +1050,6 @@ body.home::after {
   }
 }
 
-#page {
-  padding: 10px;
-}
-
 .site-branding {
   margin-bottom: 5vh;
 }
@@ -1088,15 +1081,18 @@ body.home::after {
 }
 
 .entry-content {
+  width: 100vw;
   margin-top: 10px;
   display: flex;
   flex-direction: column;
   font-size: clamp(0.9rem, -.8rem + 8.333vw, 1.5rem);
   text-align: center;
+  color: #2724dd;
 }
 
 .entry-content p {
-  margin-top: 0%;
+  margin: 5% 0 10px 0;
+  font-weight: bold;
   width: 100%;
 }
 
@@ -1123,16 +1119,18 @@ body.home::after {
   }
   .entry-content p {
     width: 30%;
+    margin-left: 100px;
   }
   .entry-content ul {
     margin-right: 5vh;
+    width: 100px;
   }
 }
 
 .carrousel {
   display: flex;
   width: 300vw;
-  height: 20vh;
+  height: 50vh;
   transition: transform 0.5s;
   /*fin div*/
 }
@@ -1157,5 +1155,37 @@ body.home::after {
 .carrousel div:nth-of-type(3) {
   width: 100vw;
   background-color: #ff5c85;
+}
+
+.bouton {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  margin: 0 0 10px 0;
+}
+
+#un, #deux, #trois {
+  background-color: #fff;
+  border-radius: 100px;
+  width: 16px;
+  height: 16px;
+  margin: 4px;
+}
+
+#un:hover, #deux:hover, #trois:hover {
+  cursor: pointer;
+  background-color: #3914a5;
+  border: 1.35px solid white;
+}
+
+@media (min-width: 1000px) {
+  #un, #deux, #trois {
+    background-color: #4096dd;
+    border: 2px;
+  }
+  #un:hover, #deux:hover, #trois:hover {
+    background-color: #49387c;
+    border: 2px solid #302d76;
+  }
 }
 /*# sourceMappingURL=style.css.map */

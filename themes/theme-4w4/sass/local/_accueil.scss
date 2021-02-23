@@ -27,10 +27,6 @@ body.home::after{
     }
 }
 
-#page{
-    padding: 10px;
-}
-
 .site-branding {
     margin-bottom: 5vh;
     p{
@@ -59,15 +55,17 @@ body.home::after{
     margin-top: 0;
 }
 
-// contenue de la page, pas encore fait
 .entry-content{
+    width: 100vw;
     margin-top: 10px;
     display: flex;
     flex-direction: column;
     font-size: clamp(.9rem, #{"-.8rem + 8.333vw"}, 1.5rem);
     text-align: center;
+    color: rgb(39, 36, 221);
     p{
-        margin-top: 0%;
+        margin: 5% 0 10px 0;
+        font-weight: bold;
         width: 100%;
     }
     ul{
@@ -90,9 +88,11 @@ body.home::after{
         text-align: start;
         p{
             width: 30%;
+            margin-left: 100px;
         }
         ul{
             margin-right: 5vh;
+            width: 100px;
         }
     }
 }
