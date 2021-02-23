@@ -10,7 +10,7 @@
 	width: map-get($columns, $numberColumns) - ( ( $columns__margin * ( $numberColumns - 1 ) ) / $numberColumns );
 }
 
-$desktop__accueil : 1100px;
+$desktop__accueil : 1000px; 
 $desktop__tablet : 800px;
 
 @mixin media-desktop{
