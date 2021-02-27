@@ -24,7 +24,6 @@
 			}
 
 			li {
-				
 				&:hover > ul,
 				&.focus > ul {
 					display: block;
@@ -72,39 +71,27 @@
 	}
 }
 
-.menu-toggle{
+#burger{
 	padding: 0;
 	border : 0;
 	transform: rotate(0);
 	transition: transform .5s;
 	background: white;
-	padding: 7px;
-}
-.menu-toggle img{
-	width: 7vw;
+	width: 10px;
+	height: 10px;
 }
 
-
-.menu-toggle:hover,
-.menu-toggle:focus{
-	border-radius: 100px;
-	background-color: rgb(230, 230, 230);
-}
-
-.menu-toggle:focus{
+#burger:focus{
 	outline: 1px solid white;
 	outline-offset: -4px;
 }
 
-.menu-toggle:active{
+#burger:active{
 transform: scale(0.9);
-}
-.main-navigation.toggled > .menu-toggle{
-	transform: rotate(90deg);
 }
 
 /* Small menu. */
-.menu-toggle,
+#burger,
 .main-navigation.toggled ul {
 	display: block;
 
@@ -112,7 +99,7 @@ transform: scale(0.9);
 
 @media screen and (min-width: 37.5em) {
 
-	.menu-toggle {
+	#burger {
 		display: none;
 	}
 

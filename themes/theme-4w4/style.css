@@ -654,7 +654,18 @@ textarea {
 			.site-title
 			.site-description
 		#site-navigation - .main-navigation
+		
 */
+.site-branding, #primary, #colophon {
+  margin-left: 1rem;
+}
+
+@media (min-width: 1000px) {
+  .site-branding, #primary, #colophon {
+    margin-left: 3rem;
+  }
+}
+
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
@@ -713,46 +724,33 @@ textarea {
   text-decoration: none;
 }
 
-.menu-toggle {
+#burger {
   padding: 0;
   border: 0;
   transform: rotate(0);
   transition: transform .5s;
   background: white;
-  padding: 7px;
+  width: 10px;
+  height: 10px;
 }
 
-.menu-toggle img {
-  width: 7vw;
-}
-
-.menu-toggle:hover,
-.menu-toggle:focus {
-  border-radius: 100px;
-  background-color: #e6e6e6;
-}
-
-.menu-toggle:focus {
+#burger:focus {
   outline: 1px solid white;
   outline-offset: -4px;
 }
 
-.menu-toggle:active {
+#burger:active {
   transform: scale(0.9);
 }
 
-.main-navigation.toggled > .menu-toggle {
-  transform: rotate(90deg);
-}
-
 /* Small menu. */
-.menu-toggle,
+#burger,
 .main-navigation.toggled ul {
   display: block;
 }
 
 @media screen and (min-width: 37.5em) {
-  .menu-toggle {
+  #burger {
     display: none;
   }
   .main-navigation ul {
@@ -1032,6 +1030,11 @@ body {
   margin: 0;
 }
 
+.home #primary {
+  margin-left: 0;
+  width: 100vw;
+}
+
 body.home::after {
   width: 100%;
   content: '';
@@ -1041,7 +1044,7 @@ body.home::after {
   left: 0;
   right: 0;
   z-index: -1;
-  background-color: #09101f;
+  background-color: #162441;
 }
 
 @media (min-width: 1000px) {
@@ -1187,5 +1190,123 @@ body.home::after {
     background-color: #49387c;
     border: 2px solid #302d76;
   }
+}
+
+/*----------------- variable sass */
+#burger {
+  display: block;
+  position: relative;
+  width: 20rem;
+  height: 20rem;
+  border: 2px solid #89da89;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+#burger:hover {
+  cursor: pointer;
+}
+
+#burger div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+#burger div:nth-of-type(1) {
+  clip-path: polygon(0 15%, 100% 15%, 100% 25%, 0 25%);
+  background-color: #8b34ee;
+}
+
+#burger div:nth-of-type(2) {
+  clip-path: polygon(0 45%, 100% 45%, 100% 55%, 0 55%);
+  background-color: #ee345c;
+  z-index: -1;
+}
+
+#burger div:nth-of-type(3) {
+  clip-path: polygon(0 75%, 100% 75%, 100% 85%, 0 85%);
+  background-color: #347bee;
+}
+
+/*--------- Animation barre 1 */
+@keyframes ouvrirX1 {
+  from {
+    clip-path: polygon(0 15%, 100% 15%, 100% 25%, 0 25%);
+  }
+  to {
+    clip-path: polygon(5% -5%, 105% 95%, 95% 105%, -5% 5%);
+  }
+}
+
+@keyframes fermerX1 {
+  from {
+    clip-path: polygon(5% -5%, 105% 95%, 95% 105%, -5% 5%);
+  }
+  to {
+    clip-path: polygon(0 15%, 100% 15%, 100% 25%, 0 25%);
+  }
+}
+
+.ouvrirX1 {
+  animation: ouvrirX1 0.3s both;
+}
+
+.fermerX1 {
+  animation: fermerX1 0.3s both;
+}
+
+/*--------- Animation barre 2 */
+@keyframes ouvrirX2 {
+  from {
+    clip-path: polygon(0 45%, 100% 45%, 100% 55%, 0 55%);
+  }
+  to {
+    clip-path: polygon(50% 45%, 50% 45%, 50% 55%, 50% 55%);
+  }
+}
+
+@keyframes fermerX2 {
+  from {
+    clip-path: polygon(50% 45%, 50% 45%, 50% 55%, 50% 55%);
+  }
+  to {
+    clip-path: polygon(0 45%, 100% 45%, 100% 55%, 0 55%);
+  }
+}
+
+.ouvrirX2 {
+  animation: ouvrirX2 0.3s both;
+}
+
+.fermerX2 {
+  animation: fermerX2 0.3s both;
+}
+
+/*--------- Animation barre 3 */
+@keyframes ouvrirX3 {
+  from {
+    clip-path: polygon(0 75%, 100% 75%, 100% 85%, 0 85%);
+  }
+  to {
+    clip-path: polygon(-5% 95%, 95% -5%, 100% 5%, 5% 105%);
+  }
+}
+
+@keyframes fermerX3 {
+  from {
+    clip-path: polygon(-5% 95%, 95% -5%, 100% 5%, 5% 105%);
+  }
+  to {
+    clip-path: polygon(0 75%, 100% 75%, 100% 85%, 0 85%);
+  }
+}
+
+.ouvrirX3 {
+  animation: ouvrirX3 0.3s both;
+}
+
+.fermerX3 {
+  animation: fermerX3 0.3s both;
 }
 /*# sourceMappingURL=style.css.map */
