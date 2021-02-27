@@ -90,6 +90,10 @@
 transform: scale(0.9);
 }
 
+.visible{
+	display: block !important;
+}
+
 /* Small menu. */
 #burger,
 .main-navigation.toggled ul {
@@ -97,13 +101,9 @@ transform: scale(0.9);
 
 }
 
-@media screen and (min-width: 37.5em) {
-
-	#burger {
-		display: none;
-	}
-
-	.main-navigation ul {
+.main-navigation ul{
+	background-color: rgb(109, 58, 160);
+	@include media-desktop{
 		display: flex;
 		height: 2rem;
 		justify-content: space-around;
@@ -111,10 +111,6 @@ transform: scale(0.9);
 		position: static;
 		width: 100vw;
 	}
-}
-
-.main-navigation ul{
-	background-color: rgb(109, 58, 160);
 }
 
 .comment-navigation,

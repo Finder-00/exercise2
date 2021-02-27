@@ -67,9 +67,9 @@
 		<?php 
 		if( is_front_page()) : ?>
 		<section class="carrousel">
-			<div></div>
-			<div></div>
-			<div></div>
+			<div>Se définir un objectif</div>
+			<div>Être concentré pour accomplir son objectif</div>
+			<div>Prendre le temps de vivre</div>
 		</section>
 		<div class="bouton">
 			<div id="un"></div>

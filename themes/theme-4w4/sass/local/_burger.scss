@@ -1,14 +1,17 @@
 /*----------------- variable sass */
-$largeur_burger : 20rem;
+$largeur_burger : 3rem;
 $duree : .3s;
 $epaisseur: 5%;
 
 #burger{
+    @include media-desktop{
+        display: none;
+    }
     display: block;
     position: relative;
     width: $largeur_burger;
     height: $largeur_burger;
-    border:2px solid rgb(137, 218, 137);
+    border:2px solid rgb(38, 101, 150);
     border-radius: 50%;
     overflow: hidden;
     &:hover{cursor: pointer;}
@@ -18,16 +21,16 @@ $epaisseur: 5%;
         height: 100%;
         &:nth-of-type(1){
             clip-path: polygon(0 15%, 100% 15%, 100% 25%, 0 25%);
-            background-color: rgb(139, 52, 238);
+            background-color: rgb(30, 35, 99);
         }
         &:nth-of-type(2){
             clip-path: polygon(0 45%, 100% 45%, 100% 55%, 0 55%);
-            background-color: rgb(238, 52, 92);
+            background-color: rgb(30, 35, 99);
             z-index: -1;
         }
         &:nth-of-type(3){
             clip-path: polygon(0 75%, 100% 75%, 100% 85%, 0 85%);
-            background-color: rgb(52, 123, 238);
+            background-color: rgb(30, 35, 99);
         }
     }
 }

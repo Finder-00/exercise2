@@ -64,23 +64,23 @@ body.home::after{
     margin-top: 10px;
     display: flex;
     flex-direction: column;
-    font-size: clamp(.9rem, #{"-.8rem + 8.333vw"}, 1.5rem);
     text-align: center;
-    color: rgb(39, 36, 221);
+    font-size: clamp(.9rem, #{"-.8rem + 8.333vw"}, 1.5rem);
+    color: rgb(44, 136, 135);
     p{
         margin: 5% 0 10px 0;
         font-weight: bold;
         width: 100%;
     }
     ul{
-        margin: 0;
+        margin: 10px 0;
         padding: 0;
         list-style-type: none;
     }
 
     .wp-block-image{
         align-self: center;
-        margin: 0px;
+        margin: 0 0 0 0px;
     }
     img{
         display: block;
@@ -88,8 +88,13 @@ body.home::after{
     }
 
     @include media-desktop{
+        margin-left: 20px;
         flex-direction: row;
         text-align: start;
+        color: rgb(39, 65, 85);
+        .wp-block-image{
+            margin: 0 0 0 10px;
+        }
         p{
             width: 30%;
             margin-left: 100px;
